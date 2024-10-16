@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辛亥革命纪念馆</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('https://img0.baidu.com/it/u=3191722311,2090847519&fm=253&fmt=auto&app=138&f=JPEG?w=778&h=500');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .button {
+            background-color: #91af4c;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #89a045;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 70%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #004085;
+            /* 页脚背景色 */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-image: url('https://img1.baidu.com/it/u=2602761053,879148992&fm=253&fmt=auto&app=138&f=JPEG?w=1000&h=500');
+            /* 可替换为您的背景图 URL */
+            background-size: cover;
+            /* 背景图覆盖整个区域 */
+            background-position: center;
+            /* 背景图居中显示 */
+            opacity: 0.9;
+            /* 透明度设置 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="辛亥革命纪念馆.html">主页</a>
+        <a href="exhibition.html">展览信息</a>
+        <a href="timeline.html">时间线</a>
+        <a href="notice.html">参观须知</a>
+        <a href="results.html">事件结果</a>
+        <a href="History man.html">人物介绍</a>
+    </div>
+
+    <header class="hero">
+        <h1>欢迎来到辛亥革命纪念馆</h1>
+        <button class="button" onclick="openModal()">点击查看更多</button>
+    </header>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>更多信息</h2>
+            <p>这里是关于辛亥革命的英雄人物更多信息...</p>
+            <li>郑先声‌：郑先声，字子瑜，1865年出生于湖南长沙，是中国同盟会最早的会员之一。他是辛亥革命烈士，1910年秋在南京狱中病逝，时年45岁。</li>
+            <li>陶泽琨‌：陶泽琨是四川辛亥革命中的英雄人物。虽然死在袁世凯党羽的手下，但历史由人民书写，1915年袁世凯称帝不成死于非命后，陶泽琨得以昭雪，其英名被成都四川忠烈祠纪念。</li>
+            <li>陶成章‌：陶成章（1878—1912），字焕卿，笔名汉思、巽言，浙江绍兴人。他是辛亥时期的重要活动家和宣传家，参与组织军国民教育会、光复会和同盟会，策划皖浙起义，并在武昌起义后设立总机关，号召江浙旧部起义响应。
+            </li>
+            <li>王金发‌：王金发（1883—1915），字季高，浙江绍兴人。他是辛亥革命志士，18岁加入反清会党，曾任绍兴军政分府都督、国民军副司令等职。王金发被孙中山誉为“东南一英杰”。</li>
+        </div>
+    </div>
+
+
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+    <h1>人物信息</h1>
+    <p>欢迎参观我们的展览，以下是一些人物介绍。</p>
+
+    <div class="exhibit" style="display: flex; align-items: flex-start;">
+        <iframe width="800" height="315"
+            src="c:\Users\兰子豪\Documents\WeChat Files\wxid_7dw258mm5hd822\FileStorage\Video\2024-10\c6f14b02cc563bd379947d7c0e744ce7.mp4"
+            title="辛亥革命视频" frameborder="0" allowfullscreen></iframe>
+
+
+
+        <div style="margin-left: 20px;">
+            <h2>人物介绍 1：孙中山</h2>
+            <p>孙中山在辛亥革命中发挥了重要作用。他是革命的主要领导者之一，主张推翻清朝统治，建立中华民国。以下是他在辛亥革命中的几个关键贡献：
+            <ul>
+                <li>倡导革命思想：孙中山提倡三民主义（民族、民权、民生），为革命提供了理论基础。</li>
+                <li>组建革命团体：他参与创立了光复会和同盟会等革命组织，动员了大量志士投入革命。</li>
+                <li>策划起义：孙中山策划并支持了多次起义，尤其是1911年的武昌起义，这次起义是辛亥革命的爆发点。</li>
+                <li>推动国际支持：孙中山积极寻求海外华人和国际社会的支持，以增强革命力量。</li>
+                <li>建立临时政府：辛亥革命成功后，孙中山被推举为中华民国临时总统，为新国家的建立贡献了力量。</li>
+            </ul>
+            通过这些努力，孙中山成为了中国近代史上重要的政治领袖和民族英雄。
+            </p>
+        </div>
+    </div>
+    <div class="exhibit" style="display: flex; align-items: flex-start;">
+        <iframe width="800" height="315"
+            src="c:\Users\兰子豪\Documents\WeChat Files\wxid_7dw258mm5hd822\FileStorage\Video\2024-10\43dc70a357e3ddf6df539717cd8fc32e.mp4"
+            title="辛亥革命视频" frameborder="0" allowfullscreen></iframe>
+
+        <div style="margin-left: 20px;">
+            <h2>人物介绍 2：黄兴</h2>
+
+            <p>黄兴是辛亥革命中的重要人物之一，对革命的成功与发展起到了关键作用。
+            <ul>
+                <li>军事指挥：黄兴被视为同盟会的军事领袖，负责策划和实施多次起义。他领导了不少局部的革命行动。在武昌起义爆发前，他在各地积极策划和动员，积累了丰富的军事经验。</li>
+                <li>武昌起义：1911年10月10日，武昌起义爆发，成为辛亥革命的导火索。黄兴在起义中担任指挥，发挥了重要作用。他组织了起义军，并迅速控制了武昌，推动了全国范围内的响应和支持。</li>
+                <li>建立政权：辛亥革命成功后，黄兴支持孙中山成立临时政府，并担任了重要职务，为新国家的建设贡献了力量。</li>
+                <li>推动革命理念：黄兴不仅是一位军事领袖，也是革命思想的传播者，他倡导三民主义，致力于推动国家的进步与发展。</li>
+                </p>
+            </ul>
+        </div>
+    </div>
+
+    <div class="exhibit" style="display: flex; align-items: flex-start;">
+        <iframe width="800" height="315"
+            src="c:\Users\兰子豪\Documents\WeChat Files\wxid_7dw258mm5hd822\FileStorage\Video\2024-10\18d9c3f47b295d603d61c44c805d1c9f.mp4"
+            title="辛亥革命视频" frameborder="0" allowfullscreen></iframe>
+        <div style="margin-left: 20px;">
+            <h2>人物介绍 3：蔡元培</h2>
+
+            <p>蔡元培是著名的教育家和思想家，他积极倡导科学与民主思想，为辛亥革命的思想准备做出了贡献。他通过教育传播进步思想，激励青年投身于革命。
+            <ul>
+                <li> 参与同盟会：蔡元培于1905年加入同盟会，是同盟会的重要成员之一。在组织中，他积极参与策划和宣传活动，推动反清斗争。</li>
+                <li> 促进团结：蔡元培主张各地革命力量的团结与合作，他在不同的革命团体之间发挥了桥梁作用，努力整合力量，为革命的成功奠定基础。</li>
+                <li> 支持武昌起义：在武昌起义爆发后，蔡元培积极支持和响应，号召更多人参与到这场革命中来，通过他的影响力动员了不少知识分子加入革命行列。</li>
+                <li> 临时政府的建立：辛亥革命成功后，蔡元培参与了中华民国临时政府的建立和运作，担任过重要职务，为新政府的发展提供了理论支持和实践指导。</li>
+                <li>教育改革：在辛亥革命后的新政权中，蔡元培继续推动教育改革，倡导科学与民主的教育理念，对中国现代教育的发展产生了深远影响。</li>
+                </p>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 辛亥革命纪念馆. 保留所有权利.</p>
+        <h2>参观指南</h2>
+        <p>开放时间：每天9:00 - 17:00<br>地址：湖北省武汉市武昌区武珞路1号
+            街道</p>
+        <h2>联系我们</h2>
+        <p>如有疑问，请拨打电话：027-88877172 或发送电子邮件至 </p>
+    </footer>
+</body>
+
+</html>
